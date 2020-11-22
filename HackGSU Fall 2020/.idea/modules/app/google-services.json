@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "63173082717",
+    "firebase_url": "https://safeoasis-78351.firebaseio.com",
+    "project_id": "safeoasis-78351",
+    "storage_bucket": "safeoasis-78351.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:63173082717:android:ddd693f1628d05644a17b4",
+        "android_client_info": {
+          "package_name": "com.example.safeoasis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "63173082717-dauf8p8tvicen9ucp6bie5g637885pd0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.safeoasis",
+            "certificate_hash": "498ffd55029794a1dfbac7f040b2f1f3c152908f"
+          }
+        },
+        {
+          "client_id": "63173082717-83btio8q9vdjtcgh367c3hdqqs894dcm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWxVvxAqHJnXDICPbjLl7ccnZOYaZV-zc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "63173082717-83btio8q9vdjtcgh367c3hdqqs894dcm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
