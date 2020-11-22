@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.util.Patterns;
@@ -17,13 +18,15 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Login extends AppCompatActivity implements View.OnClickListener {
+public class Login extends AppCompatActivity implements View.OnClickListener{
 
     private Button signin;
     private Button signUp;
     private EditText EditEmail, EditPassword;
+    public FirebaseUser user;
 
 
     private FirebaseAuth mAuth;
@@ -43,7 +46,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         EditEmail = (EditText) findViewById(R.id.email);
         EditPassword = (EditText) findViewById(R.id.password);
 
-        mAuth = FirebaseAuth.getInstance();
     }
 
     // we have to different onclicks so we can't do it like this, we got to name the methods
@@ -88,10 +90,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         }
 
 
+        mAuth = FirebaseAuth.getInstance();
+
         mAuth.signInWithEmailAndPassword(Email1, Password1).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
+                    //user = mAuth.getCurrentUser();
+
+                   // Log.e("user id: ", user.getUid());
+                   // Log.e("user token: ", "SUCCESSFUL: " +String.valueOf(user.getIdToken(true)));
                     Intent FeedIntent = new Intent(Login.this, Feed.class);
                     startActivity(FeedIntent);
                     Toast.makeText(Login.this, "Great!", Toast.LENGTH_LONG).show();
@@ -100,6 +108,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                     //       db.getReference("Users").child(username1).child(email1);
 
                 } else {
+                  //  Log.e("user token: ", "FAILED: " + String.valueOf(user.getIdToken(true)));
+
                     Toast.makeText(Login.this, "Failed. Check Credentials!", Toast.LENGTH_LONG).show();
 
                 }
