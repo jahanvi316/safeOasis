@@ -18,9 +18,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-
-import java.util.regex.Pattern;
-
 public class SignUp extends AppCompatActivity{
     FirebaseDatabase db = FirebaseDatabase.getInstance();
     private FirebaseAuth mAuth;
@@ -34,13 +31,13 @@ public class SignUp extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        EditUser = (EditText) findViewById(R.id.username);
+        EditUser = (EditText) findViewById(R.id.emaill);
         EditPassword = (EditText) findViewById(R.id.password);
         EditEmail = (EditText) findViewById(R.id.email);
 
 
         mAuth = FirebaseAuth.getInstance();
-        SignUp = (Button) findViewById(R.id.signUp);
+        SignUp = (Button) findViewById(R.id.signIn);
         SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +45,7 @@ public class SignUp extends AppCompatActivity{
             }
         });
 
-        SignIn = (Button) findViewById(R.id.signIn);
+        SignIn = (Button) findViewById(R.id.signUp);
         SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

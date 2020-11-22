@@ -8,12 +8,12 @@
     tools:context=".Login">
 
     <TextView
-        android:id="@+id/user"
+        android:id="@+id/userEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="235dp"
         android:layout_marginEnd="15dp"
-        android:text="User:"
+        android:text="Email:"
         android:textColor="@color/lightBlue"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -31,18 +31,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/divider"
-        app:layout_constraintTop_toBottomOf="@+id/user" />
-
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="220dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toEndOf="@+id/divider"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/userEmail" />
 
     <EditText
         android:id="@+id/password"
@@ -53,7 +42,7 @@
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintStart_toEndOf="@+id/divider"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <View
         android:id="@+id/divider"
@@ -67,7 +56,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/signUp"
+        android:id="@+id/signIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
@@ -82,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
-        android:id="@+id/signIn"
+        android:id="@+id/signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="175dp"
@@ -94,5 +83,16 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUp" />
+        app:layout_constraintTop_toBottomOf="@+id/signIn" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="220dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toEndOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
